@@ -91,7 +91,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 		let scrollNow = window["scrollY"];
 		let idOf = navigationButtons[i]['textContent'];
 
-		let destination = (document.querySelector("#" + idOf))["offsetTop"];;
+		let destination = (document.querySelector("#" + idOf))["offsetTop"];
 
 		if(idOf == "project") destination = destination + (150 + window["innerHeight"] / 3);
 		if(idOf == "mission") destination -= (window["innerHeight"] / 3);
