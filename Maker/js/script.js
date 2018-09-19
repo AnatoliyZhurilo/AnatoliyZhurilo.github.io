@@ -10,10 +10,12 @@ let navIsDisappeared = true;
 
 let missionBlock =  document.querySelector("#mission");
 let missionMask = document.querySelector(".mission-mask");
+let missionScrolled = false;
 let missionChapter = document.querySelector(" #mission .chapters");
 
 let projectBlock =  document.querySelector("#project");
 let projectLogos = document.querySelector(".logos").children;
+let projectScrolled = false;
 
 let eventBlock =  document.querySelector("#event");
 
@@ -152,13 +154,14 @@ fullSize.onscroll = function(){
 	}
 
 	//mission-appearing
-	if(Math.floor(window["scrollY"]) >=  missionBlock["offsetTop"] - 600 && missionMask.className == "mission-mask") {
+	if(!missionScrolled && Math.floor(window["scrollY"]) >=  missionBlock["offsetTop"] - 600 && missionMask.className == "mission-mask") {
 		classRemoveAdd(missionMask, null,"gone");
 		missionChapter.style["display"] = "block";
+		missionScrolled = true;
 	}
 
 	//project-logos-appearing
-	if(Math.floor(window["scrollY"]) >=  projectBlock["offsetTop"] && projectLogos.className == undefined) {
+	if(!projectScrolled && Math.floor(window["scrollY"]) >=  projectBlock["offsetTop"] && projectLogos.className == undefined) {
 
 		let i = 0;
 		let test = setInterval(function(){
@@ -166,7 +169,8 @@ fullSize.onscroll = function(){
 				i++
 				if(i == projectLogos.length) clearInterval(test);
 			}, 100);
-		}
+		projectScrolled = true;
+	}
 
 	//is-it-end?
 	if(window["scrollY"] >= (fullSize["offsetHeight"] - window["innerHeight"] - 5) && navIsDisappeared == true){
