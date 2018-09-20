@@ -116,7 +116,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 
 					let isToLongScrolling = new Date().getTime();
 
-					if(isToLongScrolling > scrollStart + 3000){
+					if(isToLongScrolling > scrollStart + 1500){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
 								classRemoveAdd(navigationButtons[i], "gone", "appeared");
@@ -143,7 +143,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 	
 					let isToLongScrolling = new Date().getTime();
 
-					if(isToLongScrolling > scrollStart + 3000){
+					if(isToLongScrolling > scrollStart + 1500){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
 								classRemoveAdd(navigationButtons[i], "gone", "appeared");
