@@ -82,16 +82,29 @@ hamburger.addEventListener("click", function menuNavigationChanging(){
 
 for(let i = 0; i < navigationButtons.length; i++){
 	navigationButtons[i].addEventListener("click", function navigationScrollTo(){
-		
-		for(let j = 0; j < navigationButtons.length; j++){
-			classRemoveAdd(navigationButtons[j], "appeared", "gone");
-		}
-		classRemoveAdd(navigationButtons[i], "gone", "appeared");
 
 		let scrollNow = window["scrollY"];
 		let idOf = navigationButtons[i]['textContent'];
 
 		let destination = (document.querySelector("#" + idOf))["offsetTop"];
+
+		let scrollDistance = (destination - scrollNow);
+		let scrollDistanceFraction = Math.floor(scrollDistance / 100);
+
+		if(navigator.userAgent.search(/Firefox/) > 0){
+			window.scrollTo(0, scrollDistance);
+			return;
+		}
+		for(let j = 0; j < navigationButtons.length; j++){
+			classRemoveAdd(navigationButtons[j], "appeared", "gone");
+		}
+		classRemoveAdd(navigationButtons[i], "gone", "appeared");
+
+		
+
+		
+
+		
 
 		if(idOf == "project") destination = destination + (150 + window["innerHeight"] / 3);
 		if(idOf == "mission") destination -= (window["innerHeight"] / 3);
@@ -99,8 +112,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 		
 		if(destination <= 0) destination = 0;
 		
-		let scrollDistance = (destination - scrollNow);
-		let scrollDistanceFraction = Math.floor(scrollDistance / 100);
+		
 
 		setTimeout(function(){
 			let isNotSameAsBefore = window["scrollY"];
