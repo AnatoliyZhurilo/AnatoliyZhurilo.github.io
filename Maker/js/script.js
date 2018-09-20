@@ -83,68 +83,86 @@ hamburger.addEventListener("click", function menuNavigationChanging(){
 for(let i = 0; i < navigationButtons.length; i++){
 	navigationButtons[i].addEventListener("click", function navigationScrollTo(){
 
-		let scrollNow = window["scrollY"];
+		let scrollNow = Math.floor(window["scrollY"]);
 		let idOf = navigationButtons[i]['textContent'];
-
 		let destination = (document.querySelector("#" + idOf))["offsetTop"];
+		
+		if(idOf == "project") destination = Math.floor(destination + (window["innerHeight"] / 2));
+		if(idOf == "mission") destination -= Math.floor((window["innerHeight"] / 5));
+		if(window["innerHeight"] > eventBlock["offsetHeight"] && idOf == "event") destination = Math.floor(window["pageYOffset"] - eventBlock["offsetHeight"]);
+		if(destination <= 0) destination = 1;
+		if(scrollNow === destination || Math.abs(scrollNow - destination) < (window["innerHeight"] / 2) )return;
 
-		let scrollDistance = (destination - scrollNow);
+		let scrollDistance = Math.floor(destination - scrollNow);
 		let scrollDistanceFraction = Math.floor(scrollDistance / 100);
 
-		if(navigator.userAgent.search(/Firefox/) > 0){
-			window.scrollTo(0, scrollDistance);
-			return;
-		}
 		for(let j = 0; j < navigationButtons.length; j++){
 			classRemoveAdd(navigationButtons[j], "appeared", "gone");
 		}
 		classRemoveAdd(navigationButtons[i], "gone", "appeared");
 
-		
-
-		
-
-		
-
-		if(idOf == "project") destination = destination + (150 + window["innerHeight"] / 3);
-		if(idOf == "mission") destination -= (window["innerHeight"] / 3);
-		if(window["innerHeight"] > eventBlock["offsetHeight"] && idOf == "event") destination = (window["pageYOffset"] - eventBlock["offsetHeight"]);
-		
-		if(destination <= 0) destination = 0;
-		
-		
-
 		setTimeout(function(){
-			let isNotSameAsBefore = window["scrollY"];
-			if(window["scrollY"] > destination){
+			let isNotSameAsBefore = Math.floor(window["scrollY"]);
+			let scrollStart = new Date().getTime();
+			let scrolledYet = 0;
+
+			if(Math.floor(window["scrollY"]) > destination){
 
 				let scrollInterval = setInterval(function(){
-				let step = window["scrollY"] + scrollDistanceFraction;
-				if(window["scrollY"] <= destination) {
+					let step = Math.floor(window["scrollY"] + scrollDistanceFraction);
+					
+					window.scrollTo(0, step);
+					scrolledYet += Math.abs(scrollDistanceFraction);
+
+					let isToLongScrolling = new Date().getTime();
+
+					if(isToLongScrolling > scrollStart + 3000){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
-						classRemoveAdd(navigationButtons[i], "gone", "appeared");
+								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+							}
+						window.scrollTo(0, destination);
+						return;
 					}
-				}
-				window.scrollTo(0, step);
-				if(window["scrollY"] === isNotSameAsBefore) clearInterval(scrollInterval);
 
+					if(Math.floor(window["scrollY"]) === isNotSameAsBefore || Math.floor(window["scrollY"]) <= destination){
+
+							for(let i = 0; i < navigationButtons.length; i++){
+								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+							}
+						clearInterval(scrollInterval);
+					} 
 				},1);
 			}
-			if(window["scrollY"] < destination){
+			if(Math.floor(window["scrollY"]) < destination){
 				let scrollInterval = setInterval(function(){
-				let step = window["scrollY"] + scrollDistanceFraction;
-				if(window["scrollY"] >= destination ) {
+					let step = Math.floor(window["scrollY"] + scrollDistanceFraction);
+					
+					window.scrollTo(0, step);
+					scrolledYet += Math.abs(scrollDistanceFraction);
+	
+					let isToLongScrolling = new Date().getTime();
+
+					if(isToLongScrolling > scrollStart + 3000){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
-						classRemoveAdd(navigationButtons[i], "gone", "appeared");
+								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+							}
+						window.scrollTo(0, destination);
+						return;
 					}
-				}
-				window.scrollTo(0, step);
-				if(window["scrollY"] === isNotSameAsBefore) clearInterval(scrollInterval);
 
+					if(Math.floor(window["scrollY"]) === isNotSameAsBefore || Math.floor(window["scrollY"]) >= destination){
+
+							for(let i = 0; i < navigationButtons.length; i++){
+								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+							}
+							
+						clearInterval(scrollInterval);
+					} 
 				},1);
 			}
+			
 		}, 400);
 
 	});
@@ -160,7 +178,7 @@ fullSize.onscroll = function(){
 	if(Math.floor(window["scrollY"]) >= Math.floor(hamburger["offsetHeight"]) + 20 ){
 		classRemoveAdd(hamburger, null,"menu-scrolled");
 		navigation.style["top"] = "40px";
-	}else{
+	}else if(Math.floor(window["scrollY"]) <= Math.floor(hamburger["offsetHeight"]) + 20 ){
 		classRemoveAdd(hamburger, "menu-scrolled");
 		navigation.style["top"] = "140px";
 	}
@@ -185,7 +203,7 @@ fullSize.onscroll = function(){
 	}
 
 	//is-it-end?
-	if(window["scrollY"] >= (fullSize["offsetHeight"] - window["innerHeight"] - 5) && navIsDisappeared == true){
+	if(Math.floor(window["scrollY"]) >= (fullSize["offsetHeight"] - window["innerHeight"] - 5) && navIsDisappeared == true){
 		hamburger.click();
 	}
 }
