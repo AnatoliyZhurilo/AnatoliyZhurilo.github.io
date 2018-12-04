@@ -8,6 +8,7 @@ let navigation = document.querySelector("nav ul");
 let navigationButtons = navigation.children;
 let navIsDisappeared = true;
 
+
 let missionBlock =  document.querySelector("#mission");
 let missionMask = document.querySelector(".mission-mask");
 let missionScrolled = false;
@@ -21,38 +22,6 @@ let eventBlock =  document.querySelector("#event");
 
 /////////// variables ////////////////////////
 
-/////////// function for classes ////////////////////////
-
-function classRemoveAdd(){
-	function addClass(object, cls){
-	if(void 0 === cls) return;
-
-	let arr = object.className.split(" ");
-
-	if(arr.some(function(elem){
-		return elem == cls;
-	}) ) return;
-	arr.push(cls);
-	object.className = arr.join(" ");
-	}
-
-	function removeClass(object, cls){
-	let tempArr = object.className.split(" ");
-	tempArr = tempArr.filter(function(word){
-			return word != cls;
-	});
-	object.className = tempArr.join(" ");
-	}
-
-	if(arguments[2] && !arguments[1]){
-		addClass(arguments[0], arguments[2]);
-		return;
-	}
-	removeClass(arguments[0], arguments[1]);
-	addClass(arguments[0], arguments[2]);
-}
-/////////// function for classes ////////////////////////
-
 ///////////menu appearing//////////////////////
 hamburger.addEventListener("click", function menuNavigationChanging(){
 
@@ -61,16 +30,18 @@ hamburger.addEventListener("click", function menuNavigationChanging(){
 	if (navIsDisappeared == true){
 		navIsDisappeared = false;
 
-		classRemoveAdd(navigation, "navHided", "navShoved");
 
-		classRemoveAdd(hamburger, null,"menu-clicked");
+		ClassRAT.toggle(navigation, "navShoved");
+
+		ClassRAT.toggle(hamburger, "menu-clicked");
 
 	}else {
 		navIsDisappeared = true;
+		ClassRAT.toggle(navigation, "navShoved");
+		
+		ClassRAT.toggle(hamburger, "menu-clicked");
 
-		classRemoveAdd(hamburger, "menu-clicked");
-
-		classRemoveAdd(navigation, "navShoved", "navHided");
+		
 		
 	}
 	
@@ -97,9 +68,9 @@ for(let i = 0; i < navigationButtons.length; i++){
 		let scrollDistanceFraction = Math.floor(scrollDistance / 100);
 
 		for(let j = 0; j < navigationButtons.length; j++){
-			classRemoveAdd(navigationButtons[j], "appeared", "gone");
+			ClassRAT.controll(navigationButtons[j], "appeared", "gone");
 		}
-		classRemoveAdd(navigationButtons[i], "gone", "appeared");
+		ClassRAT.controll(navigationButtons[i], "gone", "appeared");
 
 		setTimeout(function(){
 			let isNotSameAsBefore = Math.floor(window["scrollY"]);
@@ -119,7 +90,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 					if(isToLongScrolling > scrollStart + 1500){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
-								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+								ClassRAT.controll(navigationButtons[i], "gone", "appeared");
 							}
 						window.scrollTo(0, destination);
 						return;
@@ -128,7 +99,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 					if(Math.floor(window["scrollY"]) === isNotSameAsBefore || Math.floor(window["scrollY"]) <= destination){
 
 							for(let i = 0; i < navigationButtons.length; i++){
-								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+									ClassRAT.controll(navigationButtons[i], "gone", "appeared");
 							}
 						clearInterval(scrollInterval);
 					} 
@@ -146,7 +117,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 					if(isToLongScrolling > scrollStart + 1500){
 						clearInterval(scrollInterval);
 						for(let i = 0; i < navigationButtons.length; i++){
-								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+									ClassRAT.controll(navigationButtons[i], "gone", "appeared");
 							}
 						window.scrollTo(0, destination);
 						return;
@@ -155,7 +126,7 @@ for(let i = 0; i < navigationButtons.length; i++){
 					if(Math.floor(window["scrollY"]) === isNotSameAsBefore || Math.floor(window["scrollY"]) >= destination){
 
 							for(let i = 0; i < navigationButtons.length; i++){
-								classRemoveAdd(navigationButtons[i], "gone", "appeared");
+									ClassRAT.controll(navigationButtons[i], "gone", "appeared");
 							}
 							
 						clearInterval(scrollInterval);
@@ -172,40 +143,43 @@ for(let i = 0; i < navigationButtons.length; i++){
 ///////////navigation-chapter-click//////////////////////
 
 ///////////elements-onscroll-events//////////////////////
-fullSize.onscroll = function(){
+fullSize.onscroll = function scrollChangings(){
 
-	//hamburger-button
-	if(Math.floor(window["scrollY"]) >= Math.floor(hamburger["offsetHeight"]) + 20 ){
-		classRemoveAdd(hamburger, null,"menu-scrolled");
-		navigation.style["top"] = "40px";
-	}else if(Math.floor(window["scrollY"]) <= Math.floor(hamburger["offsetHeight"]) + 20 ){
-		classRemoveAdd(hamburger, "menu-scrolled");
-		navigation.style["top"] = "140px";
-	}
+	
 
-	//mission-appearing
-	if(!missionScrolled && Math.floor(window["scrollY"]) >=  missionBlock["offsetTop"] - 600 && missionMask.className == "mission-mask") {
-		classRemoveAdd(missionMask, null,"gone");
-		missionChapter.style["display"] = "block";
-		missionScrolled = true;
-	}
+		//hamburger-button
+		if(Math.floor(window["scrollY"]) >= Math.floor(hamburger["offsetHeight"]) + 20 ){
+			ClassRAT.controll(hamburger, "+","menu-scrolled");
+			navigation.style["top"] = "40px";
+		}else if(Math.floor(window["scrollY"]) <= Math.floor(hamburger["offsetHeight"]) + 20 ){
+			ClassRAT.controll(hamburger, "menu-scrolled");
+			navigation.style["top"] = "140px";
+		}
 
-	//project-logos-appearing
-	if(!projectScrolled && Math.floor(window["scrollY"]) >=  projectBlock["offsetTop"] && projectLogos.className == undefined) {
+		//mission-appearing
+		if(!missionScrolled && Math.floor(window["scrollY"]) >=  missionBlock["offsetTop"] - 600 && missionMask.className == "mission-mask") {
+			ClassRAT.controll(missionMask, "+","gone");
+			missionChapter.style["display"] = "block";
+			missionScrolled = true;
+		}
 
-		let i = 0;
-		let test = setInterval(function(){
-			classRemoveAdd(projectLogos[i], null, "appeared");
-				i++
-				if(i == projectLogos.length) clearInterval(test);
-			}, 100);
-		projectScrolled = true;
-	}
+		//project-logos-appearing
+		if(!projectScrolled && Math.floor(window["scrollY"]) >=  projectBlock["offsetTop"] && projectLogos.className == undefined) {
 
-	//is-it-end?
-	if(Math.floor(window["scrollY"]) >= (fullSize["offsetHeight"] - window["innerHeight"] - 5) && navIsDisappeared == true){
-		hamburger.click();
-	}
+			let i = 0;
+			let test = setInterval(function(){
+				ClassRAT.controll(projectLogos[i], "+", "appeared");
+					i++
+					if(i == projectLogos.length) clearInterval(test);
+				}, 100);
+			projectScrolled = true;
+		}
+
+		//is-it-end?
+		if(Math.floor(window["scrollY"]) >= (fullSize["offsetHeight"] - window["innerHeight"] - 5) && navIsDisappeared == true){
+			hamburger.click();
+		}
+	
 }
 
 
