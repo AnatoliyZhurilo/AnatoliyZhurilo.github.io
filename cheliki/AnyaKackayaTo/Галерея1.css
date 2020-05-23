@@ -1,0 +1,44 @@
+body{
+ text-align: center;
+}
+.dws-wrapper{
+	width: 500px;
+	margin: 80px auto 0;
+	position: relative;
+	border:solid 3px rgba(255,255,255,0.8);
+	background: linear-gradient(20deg,#f00,#00f);
+	overflow: hidden;
+}
+.dws-wrapper a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.dws-wrapper a img{
+	width: 100%
+}
+.dws-text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 185px 50px;
+	opacity: 0;
+	z-index: 100;
+	transition: .5s ease;
+}
+.dws-text h3{
+	font-size: 30px;
+}
+.dws-text p{
+	font-size: 16px;
+}
+
+.dws-wrapper:hover a: before{
+ 	-webkit-transform: skew(135deg) translateX(0%);
+ 	-moz-transform:skew(135deg) translateX(0%);
+ 	-ms-transform:skew(135deg) translateX(0%);
+ 	-o-transform:skew(135deg) translateX(0%);
+ 	transform:skew(135deg) translateX(0%);
+}.dws-wrapper:hover .dws-text{
+	opacity: 1;
+}

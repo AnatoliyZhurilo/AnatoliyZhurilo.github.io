@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Форма зворотнього зв'язку</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+   .r1, .r2,  .r3, .r4 {
+    display: block; 
+    height: 1px;
+    overflow: hidden;
+   }
+   .r1 {  margin: 0 5px; }
+   .r2 {  margin: 0 3px; }
+   .r3 {  margin: 0 2px; }
+   .r4 {  margin: 0 1px; height: 2px; }
+   .block-round-content { 
+    padding: 100px; /* Поля вокруг текста */
+    margin-left: 85px;
+    margin-right:390px;
+  }
+  </style>
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<!--Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!--Latest compiled and minified JavaScript-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body background="фон2.png"> 
+	<div  class="block-round">
+  <span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span>
+  <div class="block-round-content">
+	<div class="container" top="10px">
+		<div class="row">
+			<div class="col-lg-offset-3 col-lg-6"margin-top: 20%;>
+				<form class="form" action="https://formspree.io/a.sadovsky2005@gmail.com"
+  method="POST">
+					<div class="form-group">
+						<label for="exampleInputName2">Ім'я</label>
+						<input type="text" class="form-control" id="exampleInputName2" name="name" placeholder="Ваше ім'я">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail2">Пошта</label>
+						<input type="email"class="form-control" id="exampleInputEmail2" name="email" placeholder="Ваша пошта">
+						<input type="hidden" name="_next" value="//site.io/thanks.html"/>
+						<input type="hidden" name="_subject" value="Нове замовлення!">
+						<input type="text" name="_gotcha" style="display:none" />
+					</div>
+					<button type="submit" class="btn btn-default">Відправити</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+  <span class="r4"></span><span class="r3"></span><span class="r2"></span><span class="r1"></span>
+  </div>
+</body>
+</html>

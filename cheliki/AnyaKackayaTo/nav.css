@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+	
+		ul{
+			padding: 0;
+			margin: 0;
+			position:fixed;
+			left: 3;
+			top: 0;
+			height: 20px;
+			width: 100%;
+			background:#FBEFFB;
+			overflow: hidden;
+			display:inline-block;
+		}
+		ul > li{
+			display: inline-block;
+			text-align: center;
+			font-size: 20px;
+			list-style: none;
+			display:inline-block;
+		}
+		li > a{
+			display: block;
+			margin: 0;
+			text-decoration: none;
+			padding: 5px 10px;
+			color: #8000FF;
+			font-weight: 500;
+			display:inline-block;
+		}
+		li > a:hover{
+			background: #CED8F6;
+			display:inline-block;
+		}
+	</style>
+</head>
+<body>
+	<center>
+<ul>
+<li><a href="Франция.html">Головна</a></li>
+<li><a href="Галерея.html">Галерея</a></li>
+<li><a href="Вірш.html">Вірш про країну</a></li>
+<li><a href="Цікаві факти.html">Цікаві факти</a></li>
+<li><a href="Культура і мистецтво.html">Культура і мистецтво</a></li>
+<li><a href="Форма зворотнього зв;язку.html">Зворотній зв'язок</a></li>
+</ul>		
+	</center>
+</body>
+</html>

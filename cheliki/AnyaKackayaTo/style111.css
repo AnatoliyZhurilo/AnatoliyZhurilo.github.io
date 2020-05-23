@@ -1,0 +1,38 @@
+.main {
+  background: #FFF0F5;
+  padding-bottom: 30px;
+ 
+}
+.wrapper {
+  width: 200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  
+}
+h1 {
+  color: orange;
+ padding: 10px 20px;
+ display:  block;
+ background: #FFEBCD;
+ margin-top: 65px;
+ margin-left: -330px;
+ margin-right: 173px;
+ transform: skewX(-30deg);
+
+}
+span {
+  display: block;
+  transform: skewX(30deg);
+  
+}
+p {
+  background: #fff;
+  width: 900px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-top: -70px;
+  padding: 55px 10px 10px 10px;
+  margin-left: -317px;
+  
+  
+}
