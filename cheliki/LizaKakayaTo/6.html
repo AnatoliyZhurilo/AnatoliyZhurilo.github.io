@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Відео та аудіо</title>
+</head>
+<body style="color:#142369"; background="Матеріал/фон.jpg">
+	<ol class="rounded">
+  
+  <li><a href="index.html"><i>....Головна сторінка</i></a></li>
+  
+  </ol>
+	<div class="multimedia-video">
+		<video controls align='center'>
+			<source src="Матеріал/Міста.mp4" type="video/mp4">
+				</video>
+	</div>
+	<p><font size="5">
+		
+<style>
+	.purpletext {
+	color: #4d146e;
+}
+	.rounded {
+counter-reset: li; 
+list-style: none; 
+font: 20px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+width: 350px;
+}
+.rounded a {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: orange;
+color: #444;
+text-decoration: none;
+border-radius: .1em;
+transition: .3s ease-out;
+}
+.rounded a:hover {background: orange;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #8FD4C1;
+
+width: 4em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .3s ease-out;
+}
+aside { 
+ width: 100px; 
+ float: right; 
+}
+article { 
+ margin-right: 50px; 
+}
+	.multimedia {
+		overflow: auto;
+	}
+	.multimedia-video {
+margin-left: 300px;
+width: 65%;
+box-sizing: border-box;
+	}
+</style>		
+
+<p class="purpletext" align="center">Однією з найвідоміших груп є <b><i>Angel at My Table</i></b>. На жаль, вона припинила своє існування у 2015 році, однак і нині люди насолоджуються їх музикою. Нижче представлена моя улюблена композиція <b><i>Picture Perfect</i></b>.</p>
+<audio controls="">
+<source src="https://static.muzlo.cc/download/52098/Angel-At-My-Table_-_Picture-Perfect.mp3"></source> 
+
+	</body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Галерея</title>
+</head>
+<body>
+	
+	<body style="color:#142369"; background="Матеріал/фон.jpg">
+	<p><font size="5">
+		<style type="text/css">
+			.rounded {
+counter-reset: li; 
+list-style: none; 
+font: 20px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+width: 350px;
+}
+.rounded a {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: orange;
+color: #444;
+text-decoration: none;
+border-radius: .1em;
+transition: .3s ease-out;
+}
+.rounded a:hover {background: orange;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #8FD4C1;
+
+width: 4em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .3s ease-out;
+}
+aside { 
+ width: 100px; 
+ float: right; 
+}
+article { 
+ margin-right: 50px; 
+}
+		</style>
+		<b><p align="center">Галерея:</h></p></b>
+		<ol class="rounded">
+  
+  <li><a href="index.html"><i>....Головна сторінка</i></a></li>
+  
+  </ol>
+</ul>
+		<div id="main">
+	<div class="img-container">
+	<ul>
+		
+	<li><img src="Галерея/1.jpg"></li>
+	<li><img src="Галерея/2.jpg"></li>
+	<li><img src="Галерея/3.jpg"></li>
+	<li><img src="Галерея/4.jpg"></li>
+	<li><img src="Галерея/5.jpg"></li>
+	<li><img src="Галерея/6.jpg"></li>
+	<li><img src="Галерея/7.jpg"></li>
+	<li><img src="Галерея/8.jpg"></li>
+
+<style type="text/css">
+	.img-container li{
+		display: inline-block;;
+		width: 32%; 
+		padding: 10px; 
+	}
+	.img-container {
+		text-align: center;
+		margin-top:20px;
+		width: 100% 
+	}
+	.img-container img {
+		width: 80%;
+		display: inline-block;
+		transition: 25s;
+	}
+	.img-container ul li {
+		list-style-type: none;
+	}
+</style>
+		
+</ul> 
+
+</div>
+</body>
+</html>

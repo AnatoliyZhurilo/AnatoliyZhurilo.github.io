@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<title>Велике Герцогство Люксембург</title>
+<link rel="stylesheet" type="text/css" href="style.css">>
+</head>
+<body style="color:#142369"; background="фон.jpg">
+	<p><font size="5">		
+	<style>
+.greentext {
+	color: #1b402b;
+}
+.purpletext {
+	color: #4d146e;
+}
+</style>	
+<div class="square">
+</div>	
+<style type="text/css">
+.square{
+	width:1000px;
+	height:80px;
+	margin:20px auto;
+	animation-name:spin;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+}	
+@keyframes spin{
+	0% {transform: rotate (0deg);}
+	25% {background-color:orange;}
+	100% {transform: rotate (360deg);}
+
+}
+</style>
+<b><p class="one" align="center"><b>Велике Герцогство Люксембург</h></p></b>
+<p  class="slideRight" align="center"><b><i>Столиця</i></b>: Люксембург.</h1></p>
+<p  align="center"><b><i>Прапор та герб</i></b>:</h></p>
+<p  align='center'><img src="Флаг.png"><img src="герб.png">
+<style type="text/css">
+	.one {
+		animation: y1 6s 30;
+	}
+	@keyframes y1 {
+	0% {
+		margin-left: 5px;
+	}
+	2% {
+ 
+	}
+	67% {
+ 
+	}
+	100% {
+		margin-left: 100px;
+	}	
+}
+
+</style>
+<style>.fun-hover {
+  background-image: -webkit-linear-gradient(left, coral 50%, orange 50%);
+  background-image: linear-gradient(to right, coral 50%, orange 50%);
+  background-position: 0;
+  background-size: 200%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.fun-hover:hover {
+  background-position: -100%;
+}
+</style>
+<p align="center"><b><i>Мови</i></b>: німецька, французька, люксембурзька.</h2></p>
+<p align="center"><b><i>Неофіційні мови</i></b>: португальська, англійська.</h3></p>
+<p align="center"><b><i>Грошова одиниця</i></b>: євро.</h4></p>
+<p align="center"><b><i>Форма правління</i></b>: конституційна монархія.</p>
+<p align="center"><b><i>Географічне положення</i></b>: знаходиться в Західній Європі, на горбистій рівнині, а частково і на північному схилі гірського ланцюга Арденн.</h5></p>
+<p align='center'><img src="182.jpg"><img src="Карта.jpg">
+<p align="center"><b><i>Економічний розвиток</i></b>: Люксембург є другою найбагатшою високорозвиненою країною в світі. Цей показник вираховується з ВВП на душу населення.</h6></p>
+<p align="center"><b><i>Багатонаціональність</i></b>: минулого року в Люксембурзі проживало 613900 чоловік, і тим не менш, вони були поширені більш ніж на 170 різних національностей.</h7></p>
+
+<b><p class="one" class="greentext" align="center">Цікаві факті</h8></p></b>
+<p class="greentext" align="center"><b><i>Площа</i></b>: Люксембург-це одна з найменших суверенних держав світу. Його площа становить лише 2586,4 км².</h9></p>
+<p class="greentext" class="greentext" align="center"><b><i>Мінімальна заробітня плата</i></b> у люксембуржців також найвища в усьому світі.</h10></p>
+<p  class="greentext" align="center"><b><i>Середня тривалість життя</i></b> чоловіків становить 77 рокам, жінок-82.</h11></p>
+<p class="greentext" align="center"><b><i>Підземні комунікації старовинних фортець</i></b> дивують своїми розмірами. Так ви можете більше 20 кілометрів бродити по підземним ходам, що само по собі досить незвично.</h12></p>
+<p align='center'><img src="ком.jpg">
+<div style="text-align: center;">
+<b><span lang="uk" style="color: #3a6e9e; font-family: &quot;segoe script&quot;;">У Люксембурзі</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;"><br /></span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Я дихаю повітря - Люксембург.</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Лапаті хмари небо полонили.</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Доволі прохолодно, але - цур!</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Дихай та дихай - там не буде сили!</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Будинки невеликі </span><span lang="en-US" style="font-family: &quot;segoe script&quot;;">i </span><span lang="uk" style="font-family: &quot;segoe script&quot;;">зручні,</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Неначе дома, у старій частині,</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk" style="font-family: &quot;segoe script&quot;;">Дерева соковиті </span><span lang="en-US" style="font-family: &quot;segoe script&quot;;">i </span><span lang="uk" style="font-family: &quot;segoe script&quot;;">рясні.</span></b></div>
+<div style="text-align: center;">
+<b><span lang="en-US" style="font-family: &quot;segoe script&quot;;">I </span><span lang="ru" style="font-family: &quot;segoe script&quot;;">тільки люди - добрі </span><span lang="en-US" style="font-family: &quot;segoe script&quot;;">i </span><span lang="ru" style="font-family: &quot;segoe script&quot;;">щасливі.</span></b></div>
+<div style="text-align: center;">
+<b><span lang="uk"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: small;">Агапітова І. С.</span></span></b></div>
+<br />
+<p align='center'><img src="Листівка.jpg"> </p> 
+<b><p class="one" align="center"><b>Культура і мистецтво Люксембургу</h></p></b>
+<p class='fun-hover' class="purpletext" align="center"><b><i>Культура:</i></b>унікальна культура Люксембургу тим, що вона розвивалася під впливом двох держав, які довгий час передавали країну з рук в руки. Загалом, культурне життя люксембуржців досить подібне до культурного життя населення сусідніх регіонів суміжних країн.</h1></p>
+	<p class='fun-hover' class="purpletext" align="center"><b><i>Малярство:</i></b>найважливішими художниками країни 19 століття були Жан-Батист Фрезе й Ніколя Льє, відомі, зокрема, своїми пейзажами Люксембургу і його околиць. Жан Якобі, митець початку 20 століття, був володарем олімпійської золотої медалі у змаганнях з мистецтв. Відомим експресіоністом був Йозеф Куттер, автор пейзажів і портретів. Його картина «Люксембург», була виставлена у 1937 році на Всесвітній виставці у Парижі. Іншими помітними художниками були Домінік Ланг, Марсель Лансам, Еміль Кіршт, Мішель Стофель, Фоні Тіссен і Густ Грас, Ніко Клопп, автор чудових пост-імпресіоністських пейзажів, Состен Вайс, малював численні акварелі з видами Люксембургу.</h1></p>  
+	<p align='center'><img src="9.jpg"><img src="10.jpg"></p> 
+	<p class='fun-hover' class="purpletext"  align="center"><b><i>Скульптура:</i></b>поміж скульпторів найбільш відомими є автор абстрактних композицій Люсьєн Веркольє (виконував роботи в бронзі й мармурі) та Клаус Сіто (відомий як автор скульптури «Золота Жінка», що увінчує обеліск Монумента пам'яті). Одним з найуспішніших художників початку 21 століття є Су-Мей Це, уродженка Люксембургу напівкитайського походження. У 2003 році вона одержала приз «Золотий Лев» Венеціанського бієнале. З 1893 року існує Художній гурток Люксембургу - спілка художників та организація, яка щорічно присуджує «Приз великого герцога Адольфа» одному або кільком художникам, скульпторам і фотографам.</h1></p>
+	<p align='center'><img src="11.jpg"><img src="12.jpg"></p> 
+	<p class='fun-hover' class="purpletext" align="center"><b><i>Фотографія:</i></b>одним з піонерів фотографії у Люксембурзі був художник Ніколя Льє. Першу фотомайстерню у місті Люксембург відкрив маляр Петер (П'єр) Брандебург . Успішним фотографом, що робив фотографічні портрети й пейзажі, був Шарль Бернгофт , фотограф люксембурзького двору. Він мав свою майстерню та розробив фотоспалах, який дав змогу йому зменшити час експозиції. Фізик Габрієль Ліппман -один з піонерів кольорової фотографії, лауреат Нобелівської премії «за створення методу фотографічного відтворення кольорів на основі явища інтерференції». В Люксембурзі народився художник і фотограф Едвард Стайхен. Також відомий своїми фото міста Люксембург фотограф-аматор Баті Фішер . </h1></p>
+	<p align='center'><img src="13.jpg"><img src="14.jpg"></p>
+	<p class='fun-hover' class="purpletext" align="center"><b><i>Література:</i></b>пам'яткою середньовічної люксембурзької літератури є «Марієнтальський кодекс», написаний на початку 14 століття . Автором його вважається чернець Герман Венденцький. Рукопис з 5963 рядків є біографією Йоланди з Віандену, відомої люксембурзької черниці. В ньому розповідається про те, як принцеса Йоланда покинула комфортне життя у замку Віанден й перейшла у манастир у Марієнталі, де стала ігуменью.У 1829 році Антоні Майєр написав і видав першу книжку «Сходження на люксембурзький парнас» льотцебурзькою німецькою, яка пізніше стала називатися люксембурзькою мовою.Найважливішими фігурами в історії люксембурзької літератури є Едмон де ла Фонтен, поет Мішель Ленц і поет Мішель Роданж, автор люксембурзького національного епосу «Ренерт-Лис», письменник Баті Вебер журналіст і автор коротких історій, новел, драм і поем.</h1></p>
+	<p align='center'><img src="15.jpg"><img src="16.png"></p>
+	<p class='fun-hover' class="purpletext" class="purpletext" align="center"><b><i>Музика:</i></b>широкий загальний інтерес до музики і музичної діяльності в Люксембурзі можна побачити з числа членів Спілки великого герцога Адольфа, національної музичної федерації хорових товариств, духових оркестрів, музичних шкіл, театральних товариств, фольклорних асоціацій і інструментальних груп. Близько 340 музичних груп і колективів з більш ніж 17 000 індивідуальних членів в даний час є членами спілки. Один з найдавніших записів музичного твору в Люксембурзі — рукопис Officium Sancti Willibrordi, зроблений у абатстві Ехтернах, — відносться приблизно до 900 року. 1842 року було створено Люксембурзький військовий оркестор. У 1852 році у містечку Еттельбрюк місцевим піаністом Віктором Мюллердофом було засновано Філорманічне товариство.</h1></p>
+	<p class="purpletext" align="center">Однією з найвідоміших груп є <b><i>Angel at My Table</i></b>. На жаль, вона припинила своє існування у 2015 році, однак і нині люди насолоджуються їх музикою. Нижче представлена моя улюблена композиція <b><i>Picture Perfect</i></b>.</p>
+<p class="purpletext" align="center">Адміністративно-територіальна система Люксембургу включає <b><i>три округи</i></b>. Округа, в свою чергу, ділиться на <b><i>12 кантонів</i></b>, а кантони - на <b><i>116 комун</i></b>.</p>  
+<b><p align="center">Галерея:</h></p></b>
+<p align='center'><img src="1.jpg"><img src="2.jpg"><img src="3.jpg"><img src="4.jpg"></p>
+<p align='center'><img src="5.jpg"><img src="6.jpg"><img src="7.jpg"><img src="8.jpg"></p>
+<video width="320" height="240" controls>
+<source src="Міста.mp4" type="video/mp4">
+</video>
+<audio controls="">
+<source src="https://static.muzlo.cc/download/52098/Angel-At-My-Table_-_Picture-Perfect.mp3"></source> 
+</audio>
+</body>
+</html>
